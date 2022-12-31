@@ -2,6 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import en from './en';
 import 'intl-pluralrules';
+import mm from './mm';
 
 const appi18n = i18n
   .use(initReactI18next) // passes i18n down to react-i18next
@@ -9,6 +10,7 @@ const appi18n = i18n
     compatibilityJSON: 'v4',
     resources: {
       en: { translation: en },
+      mm: { translation: mm },
     },
     lng: 'en',
     fallbackLng: 'en',

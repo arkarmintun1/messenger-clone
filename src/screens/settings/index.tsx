@@ -1,9 +1,14 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { Box, FlatList, HStack, Text } from 'native-base';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { ListRenderItemInfo, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
+import { useSelector } from 'react-redux';
 import { ROUTE, RouteParams } from '..';
+import { L } from '../../localization';
+import { appSelectors } from '../../store/app/app.selector';
+import { Languages } from '../../store/app/app.slice';
 
 type SettingOptions = {
   title: string;
@@ -14,16 +19,19 @@ type SettingOptions = {
 
 type Props = NativeStackScreenProps<RouteParams, ROUTE.SETTINGS>;
 
-const SettingsScreen = ({}: Props) => {
+const SettingsScreen = ({ navigation }: Props) => {
+  const language = useSelector(appSelectors.language);
+  const { t } = useTranslation();
+
   const data: SettingOptions[] = [
     { title: 'Account', icon: 'user', action: () => {} },
     { title: 'Chats', icon: 'message-circle', action: () => {} },
     { title: 'Notifications', icon: 'bell', action: () => {} },
     {
-      title: 'Language',
+      title: t(L.language),
       icon: 'globe',
-      value: 'English (US)',
-      action: () => {},
+      value: Languages[language],
+      action: () => navigation.push(ROUTE.LANGUAGE),
     },
     { title: 'Dark Mode', icon: 'moon', action: () => {} },
     { title: 'Help Center', icon: 'help-circle', action: () => {} },
@@ -31,11 +39,13 @@ const SettingsScreen = ({}: Props) => {
   ];
 
   const _renderItem = ({ index, item }: ListRenderItemInfo<SettingOptions>) => (
-    <TouchableOpacity key={index} onPress={() => {}}>
+    <TouchableOpacity key={index} onPress={item.action}>
       <Box rounded="full" borderRadius={8} padding={2} marginX={4} marginY={1}>
         <HStack space="4" alignItems="center">
           <Icon name={item.icon} size={18} />
-          <Text flex={1}>{item.title}</Text>
+          <Text flex={1} borderWidth={0.5} alignSelf="center">
+            {item.title}
+          </Text>
           <Text>{item.value}</Text>
           <Icon name="chevron-right" size={18} />
         </HStack>

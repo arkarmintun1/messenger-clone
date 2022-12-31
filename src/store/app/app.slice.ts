@@ -1,13 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
+export const Languages = {
+  en: 'English (US)',
+  mm: 'Myanmar',
+};
+
 export interface AppState {
-  value: number;
-  language: string;
+  language: keyof typeof Languages;
 }
 
 const initialState: AppState = {
-  value: 0,
   language: 'en',
 };
 
@@ -15,14 +18,11 @@ export const appSlice = createSlice({
   name: 'app',
   initialState,
   reducers: {
-    increment: state => {
-      state.value += 1;
-    },
-    decrement: state => {
-      state.value -= 1;
-    },
-    incrementByAmount: (state, action: PayloadAction<number>) => {
-      state.value += action.payload;
+    setLanguage: (
+      state: AppState,
+      action: PayloadAction<keyof typeof Languages>,
+    ) => {
+      state.language = action.payload;
     },
   },
 });
