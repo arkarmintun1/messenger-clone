@@ -2,26 +2,38 @@ import GetStartedScreen from './get-started';
 import HomeScreen from './home';
 import SettingsScreen from './settings';
 
+export enum ROUTE {
+  HOME = 'HOME',
+  GET_STARTED = 'GET_STARTED',
+  SETTINGS = 'SETTINGS',
+}
+
+export type RouteParams = {
+  [ROUTE.HOME]: undefined;
+  [ROUTE.GET_STARTED]: undefined;
+  [ROUTE.SETTINGS]: undefined;
+};
+
 type Screen = {
-  name: string;
-  routeName: string;
-  component: () => JSX.Element;
+  title: string;
+  route: ROUTE;
+  component: (props: any) => JSX.Element;
 };
 
 export const Home: Screen = {
-  name: 'Home',
-  routeName: 'HOME',
+  title: 'Home',
+  route: ROUTE.HOME,
   component: HomeScreen,
 };
 
 export const GetStarted: Screen = {
-  name: 'Get Started',
-  routeName: 'GET_STARTED',
+  title: 'Get Started',
+  route: ROUTE.GET_STARTED,
   component: GetStartedScreen,
 };
 
 export const Settings: Screen = {
-  name: 'Settings',
-  routeName: 'SETTINGS',
+  title: 'Settings',
+  route: ROUTE.SETTINGS,
   component: SettingsScreen,
 };

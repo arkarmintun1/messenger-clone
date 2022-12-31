@@ -3,10 +3,12 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 
 export interface AppState {
   value: number;
+  language: string;
 }
 
 const initialState: AppState = {
   value: 0,
+  language: 'en',
 };
 
 export const appSlice = createSlice({
