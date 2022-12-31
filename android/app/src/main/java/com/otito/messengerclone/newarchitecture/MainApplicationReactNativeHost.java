@@ -1,4 +1,4 @@
-package com.messengerclone.newarchitecture;
+package com.otito.messengerclone.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,10 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.messengerclone.BuildConfig;
-import com.messengerclone.newarchitecture.components.MainComponentsRegistry;
-import com.messengerclone.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.otito.messengerclone.BuildConfig;
+import com.otito.messengerclone.newarchitecture.components.MainComponentsRegistry;
+import com.otito.messengerclone.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+
 import java.util.ArrayList;
 import java.util.List;
 

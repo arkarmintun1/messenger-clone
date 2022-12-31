@@ -1,4 +1,4 @@
-package com.messengerclone;
+package com.otito.messengerclone;
 
 import android.app.Application;
 import android.content.Context;
@@ -9,7 +9,9 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.config.ReactFeatureFlags;
 import com.facebook.soloader.SoLoader;
-import com.messengerclone.newarchitecture.MainApplicationReactNativeHost;
+import com.otito.messengerclone.BuildConfig;
+import com.otito.messengerclone.newarchitecture.MainApplicationReactNativeHost;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 

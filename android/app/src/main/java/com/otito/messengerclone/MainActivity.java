@@ -1,8 +1,10 @@
-package com.messengerclone;
+package com.otito.messengerclone;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
+import com.otito.messengerclone.BuildConfig;
+
 import android.os.Bundle;
 
 public class MainActivity extends ReactActivity {

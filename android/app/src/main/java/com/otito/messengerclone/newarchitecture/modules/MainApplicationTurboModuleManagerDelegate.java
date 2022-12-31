@@ -1,4 +1,4 @@
-package com.messengerclone.newarchitecture.modules;
+package com.otito.messengerclone.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;
