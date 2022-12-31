@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "563377576853",
+    "project_id": "messenger-clone-651e7",
+    "storage_bucket": "messenger-clone-651e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563377576853:android:d316eac08800736606f49c",
+        "android_client_info": {
+          "package_name": "com.otito.messengerclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563377576853-iegre45pdns8ivp88nvntd1elliq5jkm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXYlXQldkwuAGgmMvx1P2G9WKTd8Ce1qY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563377576853-iegre45pdns8ivp88nvntd1elliq5jkm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
