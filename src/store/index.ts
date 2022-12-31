@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { appReducer } from './application.slice';
+import { appReducer } from './app.slice';
 
 const middlewares: any[] = [];
 

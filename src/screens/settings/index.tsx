@@ -1,12 +1,12 @@
 import { Box, Text } from 'native-base';
 import React from 'react';
 
-const HomeScreen = () => {
+const SettingsScreen = () => {
   return (
     <Box flex={1} bg="#fff" alignItems="center" justifyContent="center">
-      <Text>Home Screen</Text>
+      <Text>Settings Screen</Text>
     </Box>
   );
 };
 
-export default HomeScreen;
+export default SettingsScreen;
