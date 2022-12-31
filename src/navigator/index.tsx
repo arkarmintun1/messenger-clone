@@ -10,7 +10,7 @@ const MainNavigationStack = () => {
 
   return (
     <Stack.Navigator
-      initialRouteName={Settings.route}
+      initialRouteName={GetStarted.route}
       screenOptions={{
         statusBarColor: theme.colors.primary[500],
         headerTintColor: theme.colors.text[50],
