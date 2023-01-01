@@ -3,7 +3,7 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 
 export const Languages = {
   en: 'English (US)',
-  mm: 'Myanmar',
+  mm: 'မြန်မာ',
 };
 
 export interface AppState {

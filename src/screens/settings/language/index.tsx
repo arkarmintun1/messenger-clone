@@ -1,6 +1,6 @@
 import { Box, FlatList, Radio } from 'native-base';
 import React from 'react';
-import { ListRenderItemInfo } from 'react-native';
+import { ListRenderItemInfo, Text } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { appSelectors } from '../../../store/app/app.selector';
 import { appActions, Languages } from '../../../store/app/app.slice';
@@ -23,7 +23,7 @@ const LanguageScreen = () => {
   }>) => (
     <Box padding={2} marginX={4} marginY={1}>
       <Radio value={item.key} key={index} size="sm">
-        {item.language}
+        <Text>{item.language}</Text>
       </Radio>
     </Box>
   );

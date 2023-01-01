@@ -1,7 +1,8 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { Box, HStack, Menu, Pressable, Text, useTheme } from 'native-base';
+import { Box, HStack, Menu, Pressable, useTheme } from 'native-base';
 import React, { useLayoutEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Text } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import { ROUTE, RouteParams } from '..';
 import { L } from '../../localization';
@@ -19,7 +20,7 @@ const HomeScreen = ({ navigation }: Props) => {
           shouldOverlapWithTrigger={false}
           offset={8}
           crossOffset={8}
-          placement="top right"
+          placement="bottom right"
           borderRadius={12}
           trigger={triggerProps => (
             <Pressable accessibilityLabel="Settings" {...triggerProps}>

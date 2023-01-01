@@ -1,8 +1,8 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { Box, FlatList, HStack, Text } from 'native-base';
+import { Box, FlatList, HStack } from 'native-base';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { ListRenderItemInfo, TouchableOpacity } from 'react-native';
+import { ListRenderItemInfo, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import { useSelector } from 'react-redux';
 import { ROUTE, RouteParams } from '..';
@@ -24,18 +24,18 @@ const SettingsScreen = ({ navigation }: Props) => {
   const { t } = useTranslation();
 
   const data: SettingOptions[] = [
-    { title: 'Account', icon: 'user', action: () => {} },
-    { title: 'Chats', icon: 'message-circle', action: () => {} },
-    { title: 'Notifications', icon: 'bell', action: () => {} },
+    { title: t(L.account), icon: 'user', action: () => {} },
+    { title: t(L.chats), icon: 'message-circle', action: () => {} },
+    { title: t(L.notifications), icon: 'bell', action: () => {} },
     {
       title: t(L.language),
       icon: 'globe',
       value: Languages[language],
       action: () => navigation.push(ROUTE.LANGUAGE),
     },
-    { title: 'Dark Mode', icon: 'moon', action: () => {} },
-    { title: 'Help Center', icon: 'help-circle', action: () => {} },
-    { title: 'Logout', icon: 'log-out', action: () => {} },
+    { title: t(L.darkMode), icon: 'moon', action: () => {} },
+    { title: t(L.helpCenter), icon: 'help-circle', action: () => {} },
+    { title: t(L.logout), icon: 'log-out', action: () => {} },
   ];
 
   const _renderItem = ({ index, item }: ListRenderItemInfo<SettingOptions>) => (
@@ -43,9 +43,7 @@ const SettingsScreen = ({ navigation }: Props) => {
       <Box rounded="full" borderRadius={8} padding={2} marginX={4} marginY={1}>
         <HStack space="4" alignItems="center">
           <Icon name={item.icon} size={18} />
-          <Text flex={1} borderWidth={0.5} alignSelf="center">
-            {item.title}
-          </Text>
+          <Text style={{ flex: 1 }}>{item.title}</Text>
           <Text>{item.value}</Text>
           <Icon name="chevron-right" size={18} />
         </HStack>
